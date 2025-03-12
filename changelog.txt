@@ -1,0 +1,19 @@
+Eddington 1D Plane Parallel RT:
+
+	Version 2.1
+
+	-Subroutine mie_rain_mp added to calculate scattering by
+		raindrops according to a Marshall-Palmer DSD, which
+		is considered a special case of a more general gamma
+		distribution. Code checks to see if Marshall-Palmer 
+		conditions are satisfied, i.e. mu=0 and n0 = 8000.
+	-Subroutine mie_ciw added to calculate scattering by cloud
+		ice assuming monodisperse with a fixed density = 0.1
+		g/cm^3 and particle size of radius = 30 um.
+	-Cloud water assumed monodisperse with radius = 100 um.
+	-mie_snow scattering subroutine changed to explicit
+		calcualations with variable density and assumed
+		inverse exponential distribtution.
+	-Gas absorption changed to allow MonoRTM or eddington 
+		absorption. MonoRTM lookup tables supplied for GMI
+		frequencies.
